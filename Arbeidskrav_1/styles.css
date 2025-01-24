@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+    Brukte "color name finder" for å finne fargenavnene til fargekodene 
+    Link: https://colordesigner.io/color-name-finder
+*/
+:root {
+    --darkslategray: #2A324B; 
+    --steelblue: #58699D; 
+    --gainsboro: #E1E5EE; 
+    --white:  #fff; 
+}
+
+html, body {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: var(--gainsboro); 
+    font-family: "roboto"; 
+}
+
+header, main, article {
+    box-sizing: border-box; 
+}
+
+main, header {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+header { 
+    background-color: var(--darkslategray); 
+    display: flex; 
+    flex-wrap: wrap; 
+
+    nav {
+        
+        ul {
+            list-style: none; 
+        }
+    }
+}
+
+main {
+    background-color: var(--white); 
+}
