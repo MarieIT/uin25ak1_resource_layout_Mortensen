@@ -4,6 +4,15 @@
     Brukte "color name finder" for å finne fargenavnene til fargekodene 
     Link: https://colordesigner.io/color-name-finder
 */
+
+/*
+    Har brukt skissens posisjon (tok skissen opp mot nettsiden) for å sammenligne høyder, lengder, mellomrom osv. for å få det mest mulig likt skissen. 
+    Tallene på henholdsvis margin, padding, font-sizes osv. kan være noe ulikt skissen, men har prøvd å fått de så likt som mulig. Brukte skriftfamilien roboto.
+*/
+
+/*
+    Samlet alle fargene i variabler slik at de kunne gjenbrukes. 
+*/
 :root {
     --darkslategray: #2A324B; 
     --steelblue: #58699D; 
@@ -32,18 +41,68 @@ main, header {
 }
 
 header { 
-    background-color: var(--darkslategray); 
-    display: flex; 
-    flex-wrap: wrap; 
+    background-color: var(--gainsboro); 
+    margin-top: 200px; 
 
     nav {
         
         ul {
             list-style: none; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0; 
+            margin: 0; 
+            
+            li {
+
+                button {
+                    background-color: var(--darkslategray);
+                    color: var(--white); 
+                    text-decoration: none;
+                    text-align: center; 
+                    font-size: 22px; 
+                    font-weight: bolder; 
+                    border: none; 
+                    padding: 30px 96px;
+                    
+                }
+
+                /*
+                    Brukte hover for å endre stilsettingen på menypunktene. Den fungerer slik at der brukeren trykker endres stilsettingen. 
+                */
+
+                button:hover {
+                    background-color: var(--white); 
+                    color: var(--darkslategray); 
+                }
+            }
         }
     }
 }
 
 main {
     background-color: var(--white); 
+    padding: 120px 200px 137px 95px; 
+
+    h2{
+        color: var(--darkslategray); 
+        margin: 0; 
+        padding: 0; 
+        font-size: 30px; 
+        font-weight: bolder; 
+    }
+
+    p{
+        font-size: 22px; 
+    }
+
+    ul{
+        li{
+            a{
+                color: var(--steelblue); 
+                font-size: 22px; 
+            }
+        }
+    }
 }
