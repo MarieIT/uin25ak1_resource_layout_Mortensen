@@ -12,11 +12,12 @@
     Har i tillegg fått god hjelp av cheatsheetsene Innføring i programmering; array-with-objects-filtered, functions
     og utvikling av interaktive nettsteder: UIN2025_coursebase. 
 */
+
 function articleCardChange(titlename) {
+     //console.log("Hva er navnet på artikkelkortet? " + titlename)
     const resourceItem = resources.filter(resourceItem => resourceItem.category === titlename)
     //console.log(resources.filter(resourceItem => resourceItem.category === titlename))
     
-    //console.log("Hva er navnet på artikkelkortet? " + titlename)
     document.getElementById("article-card").innerHTML = 
          `<h2>${resourceItem[0].category}</h2>             
             <p>
