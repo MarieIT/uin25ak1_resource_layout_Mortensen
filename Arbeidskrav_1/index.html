@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ressursarkiv</title>
     <link href="styles.css" rel="stylesheet" media="all">
-    <script src="arbeidskrav1.js"></script>
+    <script src="arbeidskrav1.js" defer></script>
     <script src="ressurser.js"></script>
 </head>
 <body>
@@ -14,27 +14,28 @@
         <nav>
             <ul>
                 <li>
-                    <button>
+                <!--Legger på en attribut (onclick) for å kalle på funksjonen articleCardChange når knappen trykt på. Sender med en parameter som skal samsvare med knappen.-->
+                    <button onclick = "articleCardChange('HTML')">
                         HTML
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onclick = "articleCardChange('CSS')">
                         CSS
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onclick = "articleCardChange('JavaScript')">
                         JavaScript
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onclick = "articleCardChange('React')">
                         React
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onclick = "articleCardChange('Sanity and headless CMS')">
                         Sanity and headless CMS 
                     </button>
                 </li>
@@ -42,14 +43,17 @@
         </nav>
     </header>
     <main>
+
+        <!--Artikkelkortet får en id så den skal bli lett å få tak i.-->
+        <article id="article-card">
         <!--Legger til en h2 tag for å indikere at dette skal være overskriften til artikkelkortet.-->
-        <h2>HTML</h2>
-        <!--Artikkelkortet får en klasse da alle artikkelkortene skal være like i struktur, men ha forskjellig innhold.-->
-        <article class="resource-cards">
+            <h2>HTML</h2>
+        <!--Legger til p tag for å indikere at her skal det komme mengde tekst (forklarende tekst på hva de ulike ressursene handler om)-->
             <p>
                 HTML står for HyperText Markup Language, 
                 og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.
             </p>
+        <!--Oppretter en uordnet liste med listeelementer som hver holder på en a tag som inkluderer link og tittel -->   
             <ul>
                 <li>
                     <a href="#">W3Schools</a>
